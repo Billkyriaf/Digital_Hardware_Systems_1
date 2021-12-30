@@ -1,1 +1,1 @@
-verilog work "src/modules/alu.v"
+verilog work "src/modules/alu/alu.v"

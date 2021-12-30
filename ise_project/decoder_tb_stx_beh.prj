@@ -1,0 +1,3 @@
+verilog isim_temp "src/modules/help_modules/decoder_5_32.v"
+verilog isim_temp "src/test_benches/decoder_tb.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,3 +1,0 @@
-verilog isim_temp "src/modules/alu.v"
-verilog isim_temp "src/test_benches/alu_test.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

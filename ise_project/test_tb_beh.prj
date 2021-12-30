@@ -1,3 +1,0 @@
-verilog work "src/test.v"
-verilog work "src/test_benches/test_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

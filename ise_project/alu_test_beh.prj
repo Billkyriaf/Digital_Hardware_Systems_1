@@ -1,3 +1,0 @@
-verilog work "src/modules/alu.v"
-verilog work "src/test_benches/alu_test.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
