@@ -6,6 +6,8 @@ module alu_test;
 	reg [31:0] A;
 	reg [31:0] B;
 	reg [3:0] Op;
+	reg clk;
+	reg enable;
 
 	// Outputs
 	wire [31:0] Out;
@@ -15,35 +17,97 @@ module alu_test;
 	alu uut (
 		.A(A), 
 		.B(B), 
-		.Op(Op), 
+		.Op(Op),
+		.clk(clk),
+		.enable(enable),
 		.Out(Out), 
 		.Zero(Zero)
 	);
 
-	localparam delay = 5;
+	localparam delay = 1;
 
 	initial begin
-		A = 12;
-		B = 12;
-		Op = 4'b0000;
+		clk = 0;
+		forever begin
+			#delay clk = ~clk;
+		end
+	end
 
-		#delay;
-		Op = 4'b0001;
+	initial begin
+		A = 32'b1001_0110_1111_0010_0000_1011_1110_0101;
+		B = 32'b1011_0100_1010_1100_0010_1001_0010_0011;
+		
+		Op = 4'b0000;  // Addition
 
-		#delay;
-		Op = 4'b0010;
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
 
-		#delay;
-		Op = 4'b0011;
+		Op = 4'b0001;  // Subtraction
 
-		#delay;
-		Op = 4'b0100;
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
 
-		#delay;
-		Op = 4'b1000;
+		Op = 4'b0010;  // Logic AND
 
-		#delay;
-		Op = 4'b1110;
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b0011;  // Logic OR
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b0100;  // Inverse A
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b1000;  // Arithmetic shift 1 right
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b1001;  // Logic shift 1 left
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b1010;  // Logic shift 1 right
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b1100;  // Rotate 1 left
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+
+		Op = 4'b1101;  // Rotate 1 right
+
+		enable = 1;
+		#2;
+		enable = 0;
+		#2;
+		
+		Op = 4'b1111;  // Undefined op code
 
 	end
       
