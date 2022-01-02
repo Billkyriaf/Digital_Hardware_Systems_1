@@ -22,11 +22,96 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Digital_Hardware_Systems.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="alu_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="decoder_5_32.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="register_32bit.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="register_file_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="register_file_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="register_file_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="register_file_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="register_file_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1641157899" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1641157899">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641157899" xil_pn:in_ck="-2050938923747477889" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1641157899">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="src/modules/alu/alu.v"/>
+      <outfile xil_pn:name="src/modules/clock.v"/>
+      <outfile xil_pn:name="src/modules/help_modules/decoder_5_32.v"/>
+      <outfile xil_pn:name="src/modules/help_modules/mux_32_1.v"/>
+      <outfile xil_pn:name="src/modules/register_file/register_32bit.v"/>
+      <outfile xil_pn:name="src/modules/register_file/register_file.v"/>
+      <outfile xil_pn:name="src/modules/register_file/zero_register_32bit.v"/>
+      <outfile xil_pn:name="src/test_benches/alu_test.v"/>
+      <outfile xil_pn:name="src/test_benches/decoder_tb.v"/>
+      <outfile xil_pn:name="src/test_benches/register_file_tb.v"/>
+      <outfile xil_pn:name="src/test_benches/register_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1641163476" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5039866605708294416" xil_pn:start_ts="1641163476">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641163476" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5859996710183918295" xil_pn:start_ts="1641163476">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641157913" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5112505397555453375" xil_pn:start_ts="1641157913">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641157913" xil_pn:in_ck="-2050938923747477889" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1641157913">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="src/modules/alu/alu.v"/>
+      <outfile xil_pn:name="src/modules/clock.v"/>
+      <outfile xil_pn:name="src/modules/help_modules/decoder_5_32.v"/>
+      <outfile xil_pn:name="src/modules/help_modules/mux_32_1.v"/>
+      <outfile xil_pn:name="src/modules/register_file/register_32bit.v"/>
+      <outfile xil_pn:name="src/modules/register_file/register_file.v"/>
+      <outfile xil_pn:name="src/modules/register_file/zero_register_32bit.v"/>
+      <outfile xil_pn:name="src/test_benches/alu_test.v"/>
+      <outfile xil_pn:name="src/test_benches/decoder_tb.v"/>
+      <outfile xil_pn:name="src/test_benches/register_file_tb.v"/>
+      <outfile xil_pn:name="src/test_benches/register_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1641163478" xil_pn:in_ck="-2050938923747477889" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5070767458641344702" xil_pn:start_ts="1641163476">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="register_file_tb_beh.prj"/>
+      <outfile xil_pn:name="register_file_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1641163478" xil_pn:in_ck="7784506350560991608" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6680952861305726921" xil_pn:start_ts="1641163478">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="register_file_tb_isim_beh.wdb"/>
+    </transform>
+  </transforms>
 
 </generated_project>
