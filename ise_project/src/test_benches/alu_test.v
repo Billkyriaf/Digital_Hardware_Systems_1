@@ -13,6 +13,7 @@ module alu_test;
 	wire [31:0] Out;
 	wire Zero;
 
+
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
 		.A(A), 
@@ -43,6 +44,7 @@ module alu_test;
 		#2;
 		enable = 0;
 		#2;
+
 
 		Op = 4'b0001;  // Subtraction
 

@@ -32,6 +32,4 @@ module register_32bit(
             Dout <= Dout;  // Export the data else
         end
     end
-
-
 endmodule
