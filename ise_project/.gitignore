@@ -70,10 +70,13 @@ xlnx_auto_0_xdb/
 xst/
 _ngo/
 _xmsgs/
+
 isim/
+
 
 # Simulation data. Some simulations are too big to upload so only the weveform files will be uploaded.
 *.wdb
+
 
 # other files
 *.log
