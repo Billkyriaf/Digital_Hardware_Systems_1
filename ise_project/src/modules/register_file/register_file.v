@@ -40,7 +40,7 @@ module register_file(
     
     // Connection between the registers and the Multiplexers. This is a bus with 32 groups of 32 data lines.
     // One group for every register
-    wire [32 * 32 - 1:0] RegToMultiplexer;  
+    wire [32 * 32 - 1:0] RegToMultiplexer;  // 0 - 1023
 
 
     // Decoder for write address
@@ -53,12 +53,12 @@ module register_file(
     // Generate all the registers.
     generate
         genvar i;
-        for (i = 0; i < 32; i = i + 1) begin : registers
+        for (i = 0; i < 32; i = i + 1) begin : registers 
             if (i == 0) begin
                 // R0 is a zero register meaning it only outputs 0 and can not be written
                 zero_register_32bit R_0 (
                     .Clk(Clk),
-                    .Dout(RegToMultiplexer[(i + 1) * 32 - 1:i * 32])
+                    .Dout(RegToMultiplexer[(i + 1) * 32 - 1:i * 32])  // Same as .Dout(RegToMultiplexer[31:0])
                 );
             end else begin
                 // Every other register is a normal 32 bit register. Every register gets a part of the very wide
