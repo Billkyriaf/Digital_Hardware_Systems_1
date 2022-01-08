@@ -52,13 +52,13 @@ module instruction_fetch_tb;
 		pc_immed = 0;
 		pc_sel = 0;
 		pc_lden = 0;
+		reset = 1;
+		#2;
 		reset = 0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
-
+		#2;
+		pc_lden = 1;
+		#2;
+		pc_lden = 0;
 	end
       
 endmodule
