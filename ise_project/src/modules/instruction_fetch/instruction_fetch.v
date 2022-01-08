@@ -25,10 +25,11 @@ module instruction_fetch(
     input PC_LdEn,
     input Reset,
     input Clk,
-    output reg[31:0] Instr
+    output [31:0] Instr
     );
 
     reg [31:0] PC;
+    wire [31:0] mux_to_pc;
     reg [2*32 - 1:0] mux_input;
 
     IMEM imem(
@@ -40,7 +41,7 @@ module instruction_fetch(
     mux_32_1 #(.BUS_WIDTH(32), .SEL(1)) mux(
         .Din(mux_input),
         .Sel(PC_Sel),
-        .Dout(PC)
+        .Dout(mux_to_pc)
     );
 
     always @(posedge Clk) begin
@@ -48,7 +49,8 @@ module instruction_fetch(
             PC = 0;
         end else if (PC_LdEn == 1) begin
             mux_input[31:0] = PC + 4;
-            mux_input[63:32] = PC + 4 + PC_Immed;            
+            mux_input[63:32] = PC + 4 + PC_Immed;  
+            PC = mux_to_pc;          
         end else begin
             PC = PC;
         end
