@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/vasilisk/Git/Digital_Hardware_Systems_1/ise_project/instruction_fetch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="instruction_fetch_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/instruction_fetch_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider71" type="divider">
+      <obj_property name="label">Inst Fetch</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00ff00</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group104" type="group">
+      <obj_property name="label">Inst Fetch</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_fetch_tb/uut/PC_Sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_Sel</obj_property>
+         <obj_property name="ObjectShortName">PC_Sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/PC_LdEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_LdEn</obj_property>
+         <obj_property name="ObjectShortName">PC_LdEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/Reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Reset</obj_property>
+         <obj_property name="ObjectShortName">Reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/PC" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/mux_to_pc" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">mux_to_pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mux_to_pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/mux_input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">mux_input[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mux_input[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/Instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/PC_Immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_Immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_Immed[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider105" type="divider">
+      <obj_property name="label">Mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#ffa500</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group113" type="group">
+      <obj_property name="label">Mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_fetch_tb/uut/mux/Din" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Din[63:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[63:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/mux/Sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Sel[0:0]</obj_property>
+         <obj_property name="ObjectShortName">Sel[0:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/mux/Dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider114" type="divider">
+      <obj_property name="label">Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#800080</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group119" type="group">
+      <obj_property name="label">Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_fetch_tb/uut/imem/addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">addr[9:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/imem/dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_fetch_tb/uut/imem/ROM" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ROM[1023:0,31:0]</obj_property>
+         <obj_property name="ObjectShortName">ROM[1023:0,31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
