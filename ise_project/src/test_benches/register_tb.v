@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 `include "../modules/clock.v"
-`include "../modules/register_file/register_32bit.v"
 
 module register_tb;
 
