@@ -52,13 +52,31 @@ module instruction_fetch_tb;
 		pc_immed = 0;
 		pc_sel = 0;
 		pc_lden = 0;
-		reset = 1;
-		#2;
 		reset = 0;
-		#2;
+		#3;
+		
 		pc_lden = 1;
 		#2;
+
 		pc_lden = 0;
+		#4;
+
+		pc_immed = 8;
+		pc_sel = 1;
+		pc_lden = 1;
+		#2;
+
+		pc_lden = 0;
+		#4;
+
+		pc_sel = 0;
+		pc_lden = 0;
+		reset = 1;
+		#4;
+
+		reset = 0;
+		pc_lden = 1;
+
 	end
       
 endmodule
