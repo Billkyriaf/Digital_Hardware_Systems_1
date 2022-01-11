@@ -1,12 +1,20 @@
 `timescale 1ns / 1ps
-`include "IMEM.v"
-`include "mux_32_1.v"
+
+`ifndef IMEM
+  `include "IMEM.v"
+  `define IMEM
+`endif
+
+`ifndef MUX
+  `include "MUX.v"
+  `define MUX
+`endif
 
 //////////////////////////////////////////////////////////////////////////////////
 //
 // Create Date:    01:07:02 01/03/2022 
 // Design Name: 
-// Module Name:    instruction_fetch 
+// Module Name:    IFSTAGE 
 // Project Name:   Digital_Hardware_Systems
 //
 // Description: 
@@ -17,7 +25,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module instruction_fetch(
+module IFSTAGE(
     input [31:0] PC_Immed,
     input PC_Sel,
     input PC_LdEn,
@@ -36,7 +44,7 @@ module instruction_fetch(
         .dout(Instr)
     );
 
-    mux_32_1 #(.BUS_WIDTH(32), .SEL(1)) mux(
+    MUX #(.BUS_WIDTH(32), .SEL(1)) mux(
         .Din(mux_input),
         .Sel(PC_Sel),
         .Dout(mux_to_pc)

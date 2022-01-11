@@ -4,12 +4,12 @@
 //
 // Create Date:   12/28/2021
 // Design Name:
-// Module Name:   decoder_5_32
+// Module Name:   DECODER_5_32
 // Project Name:  Digital_Hardware_Systems
 //
 // Description: 
 //
-//     Get an input Address and outputs to a Bus. The only data line in the bus with value 1 is the line with 
+//     Get an input Address and outputs to a Bus. The only data line in the bus with vALUe 1 is the line with 
 //     Address same as the input address. Every other line is 0.
 //
 // Dependencies:
@@ -17,7 +17,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module decoder_5_32
+module DECODER_5_32
     #(parameter OUTPUTS = 32,       // The output bus size.
       parameter ADDR = 5)           // The address size
     (input [ADDR - 1:0] Addr,       // The input address

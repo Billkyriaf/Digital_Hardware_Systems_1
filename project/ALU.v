@@ -4,7 +4,7 @@
 //
 // Create Date:   12/28/2021
 // Design Name:
-// Module Name:   alu
+// Module Name:   ALU
 // Project Name:  Digital_Hardware_Systems
 //
 // Description: 
@@ -28,11 +28,11 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module alu(
+module ALU(
     input wire [31:0] A,    // First operant
     input wire [31:0] B,    // Second operant
     input wire [3:0] Op,    // Operation code
-    input wire clk,         // Clock
+    input wire clk,         // CLOCK
     input wire enable,      // Enable signal
     output reg [31:0] Out,  // Output signal
     output reg Zero         // Single bit, 1 if output is 0, 0 else
@@ -40,7 +40,7 @@ module alu(
 
     reg tmp;
 
-    // On the positive edge of the clock...
+    // On the positive edge of the CLOCK...
     always @(posedge clk) begin
 
         if (enable) begin

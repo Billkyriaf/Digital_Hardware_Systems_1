@@ -4,7 +4,7 @@
 //
 // Create Date:   12/28/2021
 // Design Name:
-// Module Name:   mux_32_1
+// Module Name:   MUX
 // Project Name:  Digital_Hardware_Systems
 //
 // Description: 
@@ -16,7 +16,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module mux_32_1
+module MUX
 #(parameter BUS_WIDTH = 32,              // The bits of a single input
   parameter SEL = 5)                     // The number of select bits
 ( input [(BUS_WIDTH*(2**SEL))-1:0] Din,  // Create a big Bus that fits all inputs

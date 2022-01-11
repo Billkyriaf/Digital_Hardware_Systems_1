@@ -1,5 +1,10 @@
 `timescale 1ns / 1ps
-`include "clock.v"
+
+`ifndef CLOCK
+  `include "CLOCK.v"
+  `define CLOCK
+`endif
+
 
 module register_tb;
 
@@ -11,12 +16,12 @@ module register_tb;
 	// Outputs
 	wire [31:0] Dout;
 
-	clock clk(
+	CLOCK clk(
 		.Clk(Clk)
 	);
 
 	// Instantiate the Unit Under Test (UUT)
-	register_32bit uut (
+	REGISTER_32BIT uut (
 		.Clk(Clk), 
 		.WE(WE), 
 		.Data(Data), 

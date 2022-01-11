@@ -1,17 +1,20 @@
 `timescale 1ns / 1ps
 
-`ifndef mux_32_1
-  `include "mux_32_1.v"
-  `define mux_32_1
+`ifndef MUX
+  `include "MUX.v"
+  `define MUX
 `endif
 
-`include "register_file.v"
+`ifndef REGISTER_FILE
+  `include "REGISTER_FILE.v"
+  `define REGISTER_FILE
+`endif
 
 //////////////////////////////////////////////////////////////////////////////////
 // 
 // Create Date:    21:34:40 01/03/2022 
 // Design Name: 
-// Module Name:    instruction_decode 
+// Module Name:    DECSTAGE 
 // Project Name:   Digital_Hardware_Systems
 //
 // Description: 
@@ -21,7 +24,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module instruction_decode(
+module DECSTAGE(
     input [31:0] Instr,
     input RF_WrEn,
     input [31:0] ALU_out,
@@ -51,19 +54,19 @@ module instruction_decode(
     assign read_addr_select_bus[9:5] = Instr[20:16];  // From wire 20 to 16 connects the Instr[20:16]
 
     // Mux that decides the source of the data to write to the RF
-    mux_32_1 #(.BUS_WIDTH(32), .SEL(1)) write_select (
+    MUX #(.BUS_WIDTH(32), .SEL(1)) write_select (
         .Din(write_select_bus),
         .Sel(RF_WrData_sel),
         .Dout(write_data)
     );
 
-    mux_32_1 #(.BUS_WIDTH(5), .SEL(1)) read_addr_select (
+    MUX #(.BUS_WIDTH(5), .SEL(1)) read_addr_select (
         .Din(read_addr_select_bus),
         .Sel(RF_Bsel),
         .Dout(read_addr_2)
     );
 
-    register_file rf (
+    REGISTER_FILE rf (
         .Adr1(Instr[25:21]),
         .Adr2(read_addr_2),
         .Awr(Instr[20:16]),
@@ -90,11 +93,11 @@ module instruction_decode(
             6'b111000,      // li
             6'b111111:      // b
             begin
-                // This case is for all the opcodes that need a sigh extend on immediate value
+                // This case is for all the opcodes that need a sigh extend on immediate vALUe
 
-                Immed[15:0] = Instr[15:0];  // the first 16 bits of the immediate value is passed to the output
+                Immed[15:0] = Instr[15:0];  // the first 16 bits of the immediate vALUe is passed to the output
                 
-                // The bits 16 to 31 are filled with the most significant byte of the immediate value
+                // The bits 16 to 31 are filled with the most significant byte of the immediate vALUe
                 for (i = 16; i < 32; i = i + 1) begin
                     Immed[i] = Instr[15];               
                 end
@@ -103,20 +106,20 @@ module instruction_decode(
             6'b111001:       // lui
             begin
                 // This is the load unsigned immediate instruction.
-                Immed[31:16] = Instr[15:0];  // MSBs are filled with the immediate value
+                Immed[31:16] = Instr[15:0];  // MSBs are filled with the immediate vALUe
                 Immed[15:0] = 0;  // LSBs are zero filled
             end
             6'b110010,       // andi
             6'b110011:       // ori
             begin
-                // This case is for the instructions that need zero fill on immediate value.
-                Immed[15:0] = Instr[15:0];  // LSBs are filled with the immediate value
+                // This case is for the instructions that need zero fill on immediate vALUe.
+                Immed[15:0] = Instr[15:0];  // LSBs are filled with the immediate vALUe
                 Immed[31:16] = 0;  // MSBs are zero filled
             end
 
             default:
-                // If the instruction does not use immediate value...
-                Immed[31:0] = 0;  // ... the immediate value becomes 0
+                // If the instruction does not use immediate vALUe...
+                Immed[31:0] = 0;  // ... the immediate vALUe becomes 0
         endcase
     end
     

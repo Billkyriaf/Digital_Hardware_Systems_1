@@ -1,13 +1,22 @@
 `timescale 1ns / 1ps
-`include "clock.v"
-`include "instruction_decode.v"
+
+`ifndef CLOCK
+  `include "CLOCK.v"
+  `define CLOCK
+`endif
+
+`ifndef DECSTAGE
+  `include "DECSTAGE.v"
+  `define DECSTAGE
+`endif
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Create Date:   01/10/2022
-// Design Name:   instruction_decode
-// Module Name:   instruction_decode_tb.v
+// Design Name:   DECSTAGE
+// Module Name:   DECSTAGE_tb.v
 // Project Name:  Digital_Hardware_Systems
 // 
 // Description: 
@@ -18,7 +27,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module instruction_decode_tb;
+module DECSTAGE_tb;
 
 	// Inputs
 	reg [31:0] Instr;
@@ -35,12 +44,12 @@ module instruction_decode_tb;
 	wire [31:0] RF_B;
 
 
-	clock CLK(
+	CLOCK CLK(
 		.Clk(clk)
 	);
 
 	// Instantiate the Unit Under Test (UUT)
-	instruction_decode uut (
+	DECSTAGE uut (
 		.Instr(Instr), 
 		.RF_WrEn(RF_WrEn), 
 		.ALU_out(ALU_out), 

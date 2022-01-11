@@ -3,15 +3,15 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/vasilisk/Git/Digital_Hardware_Systems_1/ise_project/register_file_tb_isim_beh1.wdb" id="1" type="auto">
+      <db_ref path="/home/vasilisk/Git/Digital_Hardware_Systems_1/ise_project/REGISTER_FILE_tb_isim_beh1.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="register_file_tb" />
+            <top_module name="REGISTER_FILE_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <WVObjectSize size="11" />
-   <wvobject fp_name="/register_file_tb/Clk" type="logic" db_ref_id="1">
+   <wvobject fp_name="/REGISTER_FILE_tb/Clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
    </wvobject>
@@ -24,31 +24,31 @@
    <wvobject fp_name="group1083" type="group">
       <obj_property name="label">TestBench</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/register_file_tb/Adr1" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Adr1" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Adr1[4:0]</obj_property>
          <obj_property name="ObjectShortName">Adr1[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/Adr2" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Adr2" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Adr2[4:0]</obj_property>
          <obj_property name="ObjectShortName">Adr2[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/Awr" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Awr" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Awr[4:0]</obj_property>
          <obj_property name="ObjectShortName">Awr[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/Din" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Din" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Din[31:0]</obj_property>
          <obj_property name="ObjectShortName">Din[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/Dout1" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Dout1" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout1[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout1[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/Dout2" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/Dout2" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout2[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout2[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/WrEn" type="logic" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/WrEn" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">WrEn</obj_property>
          <obj_property name="ObjectShortName">WrEn</obj_property>
       </wvobject>
@@ -62,55 +62,55 @@
    <wvobject fp_name="group1075" type="group">
       <obj_property name="label">top module</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/register_file_tb/uut/Adr1" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Adr1" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Adr1[4:0]</obj_property>
          <obj_property name="ObjectShortName">Adr1[4:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/Adr2" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Adr2" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Adr2[4:0]</obj_property>
          <obj_property name="ObjectShortName">Adr2[4:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/Awr" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Awr" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Awr[4:0]</obj_property>
          <obj_property name="ObjectShortName">Awr[4:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/Din" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Din" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Din[31:0]</obj_property>
          <obj_property name="ObjectShortName">Din[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/Dout1" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Dout1" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout1[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout1[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/Dout2" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/Dout2" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout2[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout2[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/WrEn" type="logic" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/WrEn" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">WrEn</obj_property>
          <obj_property name="ObjectShortName">WrEn</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/decoderToRegister" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/decoderToRegister" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">decoderToRegister[31:0]</obj_property>
          <obj_property name="ObjectShortName">decoderToRegister[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ffa500</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/RegToMultiplexer" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/RegToMultiplexer" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">RegToMultiplexer[1023:0]</obj_property>
          <obj_property name="ObjectShortName">RegToMultiplexer[1023:0]</obj_property>
@@ -128,7 +128,7 @@
    <wvobject fp_name="group1082" type="group">
       <obj_property name="label">R0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/register_file_tb/uut/\registers[0].R_0 /Dout" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[0].R_0 /Dout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -144,19 +144,19 @@
    <wvobject fp_name="group1090" type="group">
       <obj_property name="label">R1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/register_file_tb/uut/\registers[1].R_i /Data" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[1].R_i /Data" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Data[31:0]</obj_property>
          <obj_property name="ObjectShortName">Data[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#00ffff</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/\registers[1].R_i /Dout" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[1].R_i /Dout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#00ffff</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/\registers[1].R_i /WE" type="logic" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[1].R_i /WE" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">WE</obj_property>
          <obj_property name="ObjectShortName">WE</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -172,19 +172,19 @@
    <wvobject fp_name="group1102" type="group">
       <obj_property name="label">R2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/register_file_tb/uut/\registers[2].R_i /Data" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[2].R_i /Data" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Data[31:0]</obj_property>
          <obj_property name="ObjectShortName">Data[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ff55ff</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/\registers[2].R_i /Dout" type="array" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[2].R_i /Dout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">Dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="CustomSignalColor">#ff55ff</obj_property>
       </wvobject>
-      <wvobject fp_name="/register_file_tb/uut/\registers[2].R_i /WE" type="logic" db_ref_id="1">
+      <wvobject fp_name="/REGISTER_FILE_tb/uut/\registers[2].R_i /WE" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">WE</obj_property>
          <obj_property name="ObjectShortName">WE</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>

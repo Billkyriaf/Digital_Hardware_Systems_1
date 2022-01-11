@@ -3,7 +3,7 @@
 //
 // Create Date:    21:01:31 12/27/2021 
 // Design Name: 
-// Module Name:    register_32bit 
+// Module Name:    REGISTER_32BIT 
 // Project Name: 
 //
 // Description: 
@@ -15,14 +15,14 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
-module register_32bit(
-    input Clk,              // Clock
+module REGISTER_32BIT(
+    input Clk,              // CLOCK
     input WE,               // Write enable
     input [31:0] Data,      // Input data
     output reg [31:0] Dout  // Output data
     );
 
-    // For every clock edge ...
+    // For every CLOCK edge ...
     always @(posedge Clk, negedge Clk) begin
 
         // Update the data if WriteEnable is high

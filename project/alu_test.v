@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module alu_test;
+module ALU_test;
 
 	// Inputs
 	reg [31:0] A;
@@ -15,7 +15,7 @@ module alu_test;
 
 
 	// Instantiate the Unit Under Test (UUT)
-	alu uut (
+	ALU uut (
 		.A(A), 
 		.B(B), 
 		.Op(Op),

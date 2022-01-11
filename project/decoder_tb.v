@@ -3,17 +3,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Create Date:   12/28/2021
-// Design Name:   decoder_5_32
+// Design Name:   DECODER_5_32
 // Module Name:   decoder_tb.v
 // Project Name:  Digital_Hardware_Systems
 //
 // Description: 
 //
-// 		Verilog Test Fixture created by ISE for module: decoder_5_32
+// 		Verilog Test Fixture created by ISE for module: DECODER_5_32
 //
 // Dependencies:
 // 
-// 		1. decoder_5_32.v module
+// 		1. DECODER_5_32.v module
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -25,7 +25,7 @@ module decoder_tb;
 	wire [31:0] signalOut ;
 
 	// Instantiate the Unit Under Test (UUT)
-	decoder_5_32 uut (
+	DECODER_5_32 uut (
 		.Addr(Addr), 
 		.Out(signalOut)
 	);

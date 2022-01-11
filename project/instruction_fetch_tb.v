@@ -1,13 +1,21 @@
 `timescale 1ns / 1ps
-`include "clock.v"
-`include "instruction_fetch.v"
+
+`ifndef CLOCK
+  `include "CLOCK.v"
+  `define CLOCK
+`endif
+
+`ifndef IFSTAGE
+  `include "IFSTAGE.v"
+  `define IFSTAGE
+`endif
 
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Create Date:   22:17:10 01/08/2022
-// Design Name:   instruction_fetch
-// Module Name:   instruction_fetch_tb.v
+// Design Name:   IFSTAGE
+// Module Name:   IFSTAGE_tb.v
 // Project Name:  ise_project
 // Target Device:  
 // Tool versions:  
@@ -18,7 +26,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module instruction_fetch_tb;
+module IFSTAGE_tb;
 
 	// Inputs
 	reg [31:0] pc_immed;
@@ -28,12 +36,12 @@ module instruction_fetch_tb;
 	wire clk;
 	wire [31:0] instr;
 
-	clock CLK(
+	CLOCK CLK(
 		.Clk(clk)
 	);
 
 	// Instantiate the Unit Under Test (UUT)
-	instruction_fetch uut (
+	IFSTAGE uut (
 		.PC_Immed(pc_immed),
 		.PC_Sel(pc_sel),
 		.PC_LdEn(pc_lden),
