@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
-`include "../help_modules/mux_32_1.v"
+`include "IMEM.v"
+`include "mux_32_1.v"
 
 //////////////////////////////////////////////////////////////////////////////////
 //
@@ -27,7 +28,7 @@ module instruction_fetch(
 
     reg [31:0] PC;
     wire [31:0] mux_to_pc;
-    reg [2*32 - 1:0] mux_input;
+    reg [2 * 32 - 1:0] mux_input;
 
     IMEM imem(
         .clk(Clk),

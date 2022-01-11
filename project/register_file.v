@@ -1,9 +1,13 @@
 `timescale 1ns / 1ps
 
-`include "../help_modules/decoder_5_32.v"
-`include "../help_modules/mux_32_1.v"
-`include "./register_32bit.v"
-`include "./zero_register_32bit.v"
+`include "decoder_5_32.v"
+`ifndef mux_32_1
+  `include "mux_32_1.v"
+  `define mux_32_1
+`endif
+`include "zero_register_32bit.v"
+`include "register_32bit.v"
+
 
 //////////////////////////////////////////////////////////////////////////////////
 //

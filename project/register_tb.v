@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "../modules/clock.v"
+`include "clock.v"
 
 module register_tb;
 

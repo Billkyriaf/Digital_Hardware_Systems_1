@@ -27,9 +27,9 @@ module register_32bit(
 
         // Update the data if WriteEnable is high
         if (WE == 1) begin
-            Dout <= Data;
+            Dout = Data;
         end else begin
-            Dout <= Dout;  // Export the data else
+            Dout = Dout;  // Export the data else
         end
     end
 endmodule

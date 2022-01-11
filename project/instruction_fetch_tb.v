@@ -1,25 +1,20 @@
 `timescale 1ns / 1ps
-`include "../modules/clock.v"
+`include "clock.v"
+`include "instruction_fetch.v"
+
 
 ////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
 //
 // Create Date:   22:17:10 01/08/2022
 // Design Name:   instruction_fetch
-// Module Name:   E:/Uni/HW/Digital_Hardware_Systems_1/ise_project/src/test_benches/instruction_fetch_tb.v
+// Module Name:   instruction_fetch_tb.v
 // Project Name:  ise_project
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: instruction_fetch
-//
 // Dependencies:
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -61,7 +56,7 @@ module instruction_fetch_tb;
 		pc_lden = 0;
 		#4;
 
-		pc_immed = 8;
+		pc_immed = -8;
 		pc_sel = 1;
 		pc_lden = 1;
 		#2;

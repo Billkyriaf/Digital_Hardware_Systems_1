@@ -1,6 +1,11 @@
 `timescale 1ns / 1ps
 
-`include "../help_modules/mux_32_1.v"
+`ifndef mux_32_1
+  `include "mux_32_1.v"
+  `define mux_32_1
+`endif
+
+`include "register_file.v"
 
 //////////////////////////////////////////////////////////////////////////////////
 // 
@@ -25,18 +30,25 @@ module instruction_decode(
     input RF_Bsel,
     input Clk,
     output reg [31:0] Immed,
-    output reg [31:0] RF_A,
-    output reg [31:0] RF_B
+    output wire [31:0] RF_A,
+    output wire [31:0] RF_B
     );
 
 
     // Write data to register
 
     wire [2 * 32 - 1:0] write_select_bus;  // Connects the ALU_out and MEM_out to the multiplexer
-    wire [31:0] write_data;  // Connects the output of the multiplexer to the RF
+    wire [2 * 5 - 1:0] read_addr_select_bus;  // Connects Instr[15:11] ans Instr[20:16] to the multiplexer
+    wire [31:0] write_data;  // Connects the output of the Write Data multiplexer to the RF
+    wire [4:0] read_addr_2;  // Connects the output of the Read Address Register to the RF
+    // wire [31:0] regA;
+    // wire [31:0] regB;
 
-    assign write_select_bus[63:32] = ALU_out;  // From wire 32 to 63 connects the ALU_out
-    assign write_select_bus[31:0] = MEM_out;  // From wire 0 to 31 connects the MEM_out
+    assign write_select_bus[63:32] = MEM_out;  // From wire 32 to 63 connects the ALU_out
+    assign write_select_bus[31:0] = ALU_out;  // From wire 0 to 31 connects the MEM_out
+
+    assign read_addr_select_bus[4:0] = Instr[15:11];  // From wire 4 to 0 connects the Instr[15:11]
+    assign read_addr_select_bus[9:5] = Instr[20:16];  // From wire 20 to 16 connects the Instr[20:16]
 
     // Mux that decides the source of the data to write to the RF
     mux_32_1 #(.BUS_WIDTH(32), .SEL(1)) write_select (
@@ -45,12 +57,29 @@ module instruction_decode(
         .Dout(write_data)
     );
 
+    mux_32_1 #(.BUS_WIDTH(5), .SEL(1)) read_addr_select (
+        .Din(read_addr_select_bus),
+        .Sel(RF_Bsel),
+        .Dout(read_addr_2)
+    );
 
+    register_file rf (
+        .Adr1(Instr[25:21]),
+        .Adr2(read_addr_2),
+        .Awr(Instr[20:16]),
+        .Din(write_data),
+        .WrEn(RF_WrEn),
+        .Clk(Clk),
+        .Dout1(RF_A),
+        .Dout2(RF_B)
+    );
+
+
+    integer i;
+    
     // Immediate module triggers on instruction change
     always @(Instr) begin
-        integer i;
-
-        case (Instr[5:0])
+        case (Instr[31:26])
             6'b000000,      // beq
             6'b000001,      // bne
             6'b000011,      // lb

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/vasilisk/Git/Digital_Hardware_Systems_1/project/instruction_decode_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="instruction_decode_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/instruction_decode_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider11" type="divider">
+      <obj_property name="label">Test Bench</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#008000</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group12" type="group">
+      <obj_property name="label">tb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_decode_tb/Immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Immed[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/RF_A" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/RF_B" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/Instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/RF_WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrEn</obj_property>
+         <obj_property name="ObjectShortName">RF_WrEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/ALU_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/MEM_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">MEM_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/RF_WrData_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrData_sel</obj_property>
+         <obj_property name="ObjectShortName">RF_WrData_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/RF_Bsel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_Bsel</obj_property>
+         <obj_property name="ObjectShortName">RF_Bsel</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider13" type="divider">
+      <obj_property name="label">Top Module</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#ff00ff</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group30" type="group">
+      <obj_property name="label">Decode</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_decode_tb/uut/RF_WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrEn</obj_property>
+         <obj_property name="ObjectShortName">RF_WrEn</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/ALU_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_out[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/MEM_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">MEM_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_out[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/RF_WrData_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrData_sel</obj_property>
+         <obj_property name="ObjectShortName">RF_WrData_sel</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/RF_Bsel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_Bsel</obj_property>
+         <obj_property name="ObjectShortName">RF_Bsel</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_select_bus" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">write_select_bus[63:0]</obj_property>
+         <obj_property name="ObjectShortName">write_select_bus[63:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_select_bus" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">read_addr_select_bus[9:0]</obj_property>
+         <obj_property name="ObjectShortName">read_addr_select_bus[9:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">read_addr_2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">read_addr_2[4:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/Immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Immed[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/RF_A" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_A[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/RF_B" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_B[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/i" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider120" type="divider">
+      <obj_property name="label">RF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#0000ff</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group131" type="group">
+      <obj_property name="label">RF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Adr1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Adr1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Adr1[4:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Adr2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Adr2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Adr2[4:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Awr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Awr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Awr[4:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Din" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">WrEn</obj_property>
+         <obj_property name="ObjectShortName">WrEn</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/decoderToRegister" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">decoderToRegister[31:0]</obj_property>
+         <obj_property name="ObjectShortName">decoderToRegister[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/RegToMultiplexer" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RegToMultiplexer[1023:0]</obj_property>
+         <obj_property name="ObjectShortName">RegToMultiplexer[1023:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Dout1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout1[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/rf/Dout2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout2[31:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#0000ff</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider61" type="divider">
+      <obj_property name="label">Muxes</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group60" type="group">
+      <obj_property name="label">Write mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_select/Din" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Din[63:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_select/Sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Sel[0:0]</obj_property>
+         <obj_property name="ObjectShortName">Sel[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_select/Dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/write_select/inputs" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">inputs[1:0,31:0]</obj_property>
+         <obj_property name="ObjectShortName">inputs[1:0,31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group69" type="group">
+      <obj_property name="label">Read mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_select/Din" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Din[9:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_select/Sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Sel[0:0]</obj_property>
+         <obj_property name="ObjectShortName">Sel[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_select/Dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/instruction_decode_tb/uut/read_addr_select/inputs" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">inputs[1:0,4:0]</obj_property>
+         <obj_property name="ObjectShortName">inputs[1:0,4:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

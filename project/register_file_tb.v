@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 
-`include "../modules/clock.v"
+`include "clock.v"
+`include "register_file.v"
+
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer:
