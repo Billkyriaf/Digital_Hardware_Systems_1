@@ -56,15 +56,21 @@ module IFSTAGE_tb;
 		pc_sel = 0;
 		pc_lden = 0;
 		reset = 0;
-		#3;
-		
+		#2;
+
 		pc_lden = 1;
 		#2;
 
 		pc_lden = 0;
 		#4;
 
-		pc_immed = -8;
+		pc_lden = 1;
+		#2;
+
+		pc_lden = 0;
+		#4;
+
+		pc_immed = -12;
 		pc_sel = 1;
 		pc_lden = 1;
 		#2;
