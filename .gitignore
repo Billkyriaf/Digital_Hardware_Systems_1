@@ -1,1 +1,6 @@
 .vscode/
+*.c
+*.out
+*.py
+rom.data
+instruction_rom.data
