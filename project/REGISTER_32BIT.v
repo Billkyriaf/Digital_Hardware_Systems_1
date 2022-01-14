@@ -23,7 +23,7 @@ module REGISTER_32BIT(
     );
 
     // For every CLOCK edge ...
-    always @(posedge Clk, negedge Clk) begin
+    always @(posedge Clk) begin
 
         // Update the data if WriteEnable is high
         if (WE == 1) begin
