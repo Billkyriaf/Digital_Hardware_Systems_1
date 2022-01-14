@@ -83,14 +83,36 @@ module DECSTAGE(
     // Immediate module triggers on instruction change
     always @(Instr) begin
         case (Instr[31:26])
-            6'b000000,      // beq
-            6'b000001,      // bne
-            6'b000011,      // lb
-            6'b000111,      // sb
             6'b001111,      // lw
             6'b011111,      // sw
             6'b110000,      // addi
-            6'b111000,      // li
+            6'b111000:      // li
+            begin
+                // This case is for all the opcodes that need a sigh extend on immediate vALUe
+
+                Immed[15:0] = Instr[15:0];  // the first 16 bits of the immediate vALUe is passed to the output
+                
+                // The bits 16 to 31 are filled with the most significant byte of the immediate vALUe
+                for (i = 16; i < 32; i = i + 1) begin
+                    Immed[i] = Instr[15];               
+                end
+            end
+
+            6'b000011,      // lb
+            6'b000111:      // sb
+            begin
+                // This case is for all the opcodes that need a sigh extend on immediate vALUe
+
+                Immed[15:0] = Instr[15:0];  // the first 16 bits of the immediate vALUe is passed to the output
+                
+                // The bits 16 to 31 are filled with the most significant byte of the immediate vALUe
+                for (i = 16; i < 32; i = i + 1) begin
+                    Immed[i] = Instr[15];               
+                end
+            end
+
+            6'b000000,      // beq
+            6'b000001,      // bne
             6'b111111:      // b
             begin
                 // This case is for all the opcodes that need a sigh extend on immediate vALUe
@@ -101,6 +123,8 @@ module DECSTAGE(
                 for (i = 16; i < 32; i = i + 1) begin
                     Immed[i] = Instr[15];               
                 end
+
+                Immed = Immed << 2;  // Immed = Immed * 4
             end
 
             6'b111001:       // lui
