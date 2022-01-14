@@ -32,15 +32,21 @@ module IFSTAGE(
     input Reset,
     input Clk,
     output [31:0] Instr
-    );
+);
 
     reg [31:0] PC;
+    wire [2 * 32 - 1:0] mux_input;
     wire [31:0] mux_to_pc;
-    reg [2 * 32 - 1:0] mux_input;
+    wire [31:0] pc_to_memory;
+
+    assign pc_to_memory = PC;
+
+    assign mux_input[31:0] = PC + 4;
+    assign mux_input[63:32] = PC + 4 + PC_Immed;
 
     IMEM imem(
         .clk(Clk),
-        .addr(PC[11:2]),
+        .addr(pc_to_memory[11:2]),
         .dout(Instr)
     );
 
@@ -54,19 +60,25 @@ module IFSTAGE(
         PC = 0;
     end
 
+
+    // always @(mux_to_pc) begin
+    //     if(Reset == 1) begin
+    //         PC = 0;
+    //     end else if (PC_LdEn == 1) begin
+    //         PC = mux_to_pc;
+    //     end else begin
+    //         PC = PC;
+    //     end
+    // end
+
     always @(posedge Clk) begin
         if(Reset == 1) begin
-            assign PC = 0;
+            PC = 0;
         end else if (PC_LdEn == 1) begin
-            mux_input[31:0] = PC + 4;
-            mux_input[63:32] = PC + 4 + PC_Immed;  
-            assign PC = mux_to_pc;
-
+            PC = mux_to_pc;
         end else begin
             PC = PC;
         end
-
-        
     end
 endmodule
 
