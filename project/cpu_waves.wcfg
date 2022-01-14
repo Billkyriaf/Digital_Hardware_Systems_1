@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/vasilisk/Git/Digital_Hardware_Systems_1/project/cpu_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="cpu_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/cpu_tb/Clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb/uut/control/adder" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">adder[2:0]</obj_property>
+      <obj_property name="ObjectShortName">adder[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1192" type="divider">
+      <obj_property name="label">PROCESSOR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1055" type="group">
+      <obj_property name="label">CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cpu_tb/uut/PC_Sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_Sel</obj_property>
+         <obj_property name="ObjectShortName">PC_Sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/PC_LdEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_LdEn</obj_property>
+         <obj_property name="ObjectShortName">PC_LdEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/Reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Reset</obj_property>
+         <obj_property name="ObjectShortName">Reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/RF_Bsel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_Bsel</obj_property>
+         <obj_property name="ObjectShortName">RF_Bsel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/RF_WrData_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrData_sel</obj_property>
+         <obj_property name="ObjectShortName">RF_WrData_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/RF_WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_WrEn</obj_property>
+         <obj_property name="ObjectShortName">RF_WrEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/ALU_Bin_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_Bin_sel</obj_property>
+         <obj_property name="ObjectShortName">ALU_Bin_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/Mem_WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Mem_WrEn</obj_property>
+         <obj_property name="ObjectShortName">Mem_WrEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/ALU_func" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_func[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_func[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/Instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/immediate" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immediate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immediate[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/ALU_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/MEM_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">MEM_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/RF_A" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/RF_B" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RF_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RF_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/zero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider1191" type="divider">
+      <obj_property name="label">Register File</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1054" type="group">
+      <obj_property name="label">Register_File</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Adr1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Adr1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Adr1[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Adr2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Adr2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Adr2[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Awr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Awr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Awr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Din" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">WrEn</obj_property>
+         <obj_property name="ObjectShortName">WrEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Clk</obj_property>
+         <obj_property name="ObjectShortName">Clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Dout1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/Dout2" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Dout2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/decoderToRegister" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">decoderToRegister[31:0]</obj_property>
+         <obj_property name="ObjectShortName">decoderToRegister[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/RegToMultiplexer" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RegToMultiplexer[1023:0]</obj_property>
+         <obj_property name="ObjectShortName">RegToMultiplexer[1023:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider1190" type="divider">
+      <obj_property name="label">Instruction Fetch</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1189" type="group">
+      <obj_property name="label">IFSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/PC_Immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_Immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_Immed[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/PC_Sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_Sel</obj_property>
+         <obj_property name="ObjectShortName">PC_Sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/PC_LdEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">PC_LdEn</obj_property>
+         <obj_property name="ObjectShortName">PC_LdEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/Reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Reset</obj_property>
+         <obj_property name="ObjectShortName">Reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/Instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/mux_input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">mux_input[63:0]</obj_property>
+         <obj_property name="ObjectShortName">mux_input[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/mux_to_pc" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">mux_to_pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mux_to_pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/pc_to_memory" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_to_memory[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_to_memory[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/instruction_fetch/PC" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider127" type="divider">
+      <obj_property name="label">Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group126" type="group">
+      <obj_property name="label">MEMSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/cpu_tb/uut/memory/Mem_WrEn" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Mem_WrEn</obj_property>
+         <obj_property name="ObjectShortName">Mem_WrEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/Mem_In_Out_Sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">Mem_In_Out_Sel</obj_property>
+         <obj_property name="ObjectShortName">Mem_In_Out_Sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/ALU_MEM_Addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALU_MEM_Addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALU_MEM_Addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/MEM_DataIn" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">MEM_DataIn[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DataIn[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/MEM_DataOut" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">MEM_DataOut[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DataOut[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/input_mux_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input_mux_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">input_mux_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/input_mux_to_mem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input_mux_to_mem[31:0]</obj_property>
+         <obj_property name="ObjectShortName">input_mux_to_mem[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/output_mux_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output_mux_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">output_mux_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cpu_tb/uut/memory/mem_to_output_mux" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">mem_to_output_mux[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_to_output_mux[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group148" type="group">
+         <obj_property name="label">RAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/memory/memory/we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">we</obj_property>
+            <obj_property name="ObjectShortName">we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/memory/memory/addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">addr[9:0]</obj_property>
+            <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/memory/memory/din" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">din[31:0]</obj_property>
+            <obj_property name="ObjectShortName">din[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/memory/memory/dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/memory/memory/RAM" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">RAM[1023:0,31:0]</obj_property>
+            <obj_property name="ObjectShortName">RAM[1023:0,31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider1056" type="divider">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1178" type="group">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group1061" type="group">
+         <obj_property name="label">R1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[1].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[1].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[1].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1066" type="group">
+         <obj_property name="label">R2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[2].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[2].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[2].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1071" type="group">
+         <obj_property name="label">R3</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[3].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[3].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[3].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1076" type="group">
+         <obj_property name="label">R4</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[4].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[4].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[4].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1081" type="group">
+         <obj_property name="label">R5</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[5].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[5].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[5].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1118" type="group">
+         <obj_property name="label">R6</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[6].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[6].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[6].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1167" type="group">
+         <obj_property name="label">R7</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[7].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[7].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[7].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1168" type="group">
+         <obj_property name="label">R8</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[8].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[8].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[8].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1169" type="group">
+         <obj_property name="label">R9</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[9].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[9].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[9].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1170" type="group">
+         <obj_property name="label">R10</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[10].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[10].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[10].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1171" type="group">
+         <obj_property name="label">R11</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[11].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[11].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[11].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1172" type="group">
+         <obj_property name="label">R12</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[12].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[12].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[12].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1173" type="group">
+         <obj_property name="label">R13</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[13].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[13].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[13].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1174" type="group">
+         <obj_property name="label">R14</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[14].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[14].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[14].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1175" type="group">
+         <obj_property name="label">R15</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[15].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[15].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[15].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1176" type="group">
+         <obj_property name="label">R16</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[16].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[16].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[16].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1177" type="group">
+         <obj_property name="label">R17</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[17].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[17].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[17].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1181" type="group">
+         <obj_property name="label">R18</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[18].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[18].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[18].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1182" type="group">
+         <obj_property name="label">R19</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[19].R_i /WE" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">WE</obj_property>
+            <obj_property name="ObjectShortName">WE</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[19].R_i /Data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Data[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/cpu_tb/uut/instruction_decode/rf/\registers[19].R_i /Dout" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>
