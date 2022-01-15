@@ -43,7 +43,7 @@ module DECSTAGE(
     wire [2 * 32 - 1:0] write_select_bus;  // Connects the ALU_out and MEM_out to the multiplexer
     wire [2 * 5 - 1:0] read_addr_select_bus;  // Connects Instr[15:11] ans Instr[20:16] to the multiplexer
     wire [31:0] write_data;  // Connects the output of the Write Data multiplexer to the RF
-    wire [4:0] read_addr_2;  // Connects the output of the Read Address Register to the RF
+    wire [4:0] read_addr_2;  // Connects the output of the Read Address Multiplexer to the RF
     // wire [31:0] regA;
     // wire [31:0] regB;
 
