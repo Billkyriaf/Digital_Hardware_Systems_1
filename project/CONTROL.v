@@ -506,6 +506,17 @@ module CONTROL(
                     Mem_In_Out_Sel = 0;
                 end
             endcase
+        end else begin
+            PC_Sel = 0;
+            PC_LdEn = 0;
+            Reset = 0;
+            RF_B_sel = 0;
+            RF_WrData_sel = 0;
+            RF_WEn = 0;
+            ALU_Bin_sel = 0;
+            ALU_func = 0;
+            MEM_WrEn = 0;
+            Mem_In_Out_Sel = 0;
         end
     end
 

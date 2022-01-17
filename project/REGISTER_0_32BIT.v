@@ -21,7 +21,7 @@ module REGISTER_0_32BIT(
     );
 
     // Output 0 on every CLOCK state
-    always @(Clk) begin
+    always @(posedge Clk) begin
         Dout = 0;
     end
 
