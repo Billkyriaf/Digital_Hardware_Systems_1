@@ -122,6 +122,10 @@ module CONTROL(
             
         end else if (Instr[31:26] == 6'b111000 || Instr[31:26] == 6'b111001 || Instr[31:26] == 6'b110000) begin   // li, lui, addi instructions
              case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+                
                 3'b010: begin
                     ALU_Bin_sel = 1;
                 end
@@ -135,6 +139,7 @@ module CONTROL(
                     PC_LdEn = 1;
                     RF_WEn = 0;
                     ALU_Bin_sel = 0;
+                    RF_B_sel = 0;
                 end
 
                 default: begin
@@ -153,6 +158,10 @@ module CONTROL(
 
         end else if (Instr[31:26] == 6'b110010) begin  // andi instruction
             case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+
                 3'b010: begin
                     ALU_Bin_sel = 1;
                     ALU_func = 4'b0010;
@@ -167,6 +176,7 @@ module CONTROL(
                     PC_LdEn = 1;
                     RF_WEn = 0;
                     ALU_Bin_sel = 0;
+                    RF_B_sel = 0;
                 end
 
                 default: begin
@@ -184,6 +194,10 @@ module CONTROL(
             endcase
         end else if (Instr[31:26] == 6'b110011) begin  // ori instruction
             case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+
                 3'b010: begin
                     ALU_Bin_sel = 1;
                     ALU_func = 4'b0011;
@@ -198,6 +212,7 @@ module CONTROL(
                     PC_LdEn = 1;
                     RF_WEn = 0;
                     ALU_Bin_sel = 0;
+                    RF_B_sel = 0;
                 end
 
                 default: begin
@@ -215,9 +230,22 @@ module CONTROL(
             endcase
         end else if (Instr[31:26] == 6'b111111) begin  // b instruction
             case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+
+                3'b010: begin
+                    RF_B_sel = 1;
+                end
+
+                3'b011: begin
+                    RF_B_sel = 1;
+                end
+
                 3'b100: begin
                     PC_Sel = 1;
                     PC_LdEn = 1;
+                    RF_B_sel = 0;
                 end
 
                 default: begin
@@ -308,6 +336,10 @@ module CONTROL(
 
         end else if (Instr[31:26] == 6'b001111) begin  // lw instruction
             case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+                
                 3'b010: begin
                     ALU_Bin_sel = 1;
                     ALU_func = 0;
@@ -328,6 +360,7 @@ module CONTROL(
                 3'b101: begin
                     PC_Sel = 0;
                     PC_LdEn = 1;
+                    RF_B_sel = 0;
                     RF_WrData_sel = 0;
                     RF_WEn = 0;
                     ALU_Bin_sel = 0;
@@ -425,6 +458,10 @@ module CONTROL(
 
         end else if (Instr[31:26] == 6'b000011) begin  // lb instruction
             case (adder)
+                3'b001: begin
+                    RF_B_sel = 1;
+                end
+
                 3'b010: begin
                     ALU_Bin_sel = 1;
                     ALU_func = 0;
@@ -446,6 +483,7 @@ module CONTROL(
                 3'b101: begin
                     PC_Sel = 0;
                     PC_LdEn = 1;
+                    RF_B_sel = 0;
                     RF_WrData_sel = 0;
                     RF_WEn = 0;
                     ALU_Bin_sel = 0;
