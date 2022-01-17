@@ -1,21 +1,17 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    22:20:10 01/11/2022 
+//
+// Create Date:    01/11/2022 
 // Design Name: 
 // Module Name:    MEM 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   Digital_Hardware_Systems
+//
 // Description: 
 //
-// Dependencies: 
+//      Memory. This could be a cache memory or a RAM on a cache-less cpu 
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Dependencies: 
 //
 //////////////////////////////////////////////////////////////////////////////////
 

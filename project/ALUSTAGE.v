@@ -11,24 +11,23 @@
 `endif
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
 // 
-// Create Date:    23:03:41 01/11/2022 
+// Create Date:    01/11/2022 
 // Design Name: 
 // Module Name:    ALUSTAGE 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Project Name:   Digital_Hardware_Systems
 //
-// Dependencies: 
+// Description:
+//      
+//      Connects the ALU module with the input multiplexer for the second operant.
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Dependencies:
+//
+//      1. ALU.v
+//      2. MUX.v
 //
 //////////////////////////////////////////////////////////////////////////////////
+
 module ALUSTAGE(
     input [31:0] RF_A,
     input [31:0] RF_B,
@@ -40,20 +39,19 @@ module ALUSTAGE(
 );
 
     wire [2*32 - 1:0] inputs;  // the input array to the mux
-    wire [31:0] mux_to_ALU;   // the output of the mux that becomes
-                             // the input to ALU module
+    wire [31:0] mux_to_ALU;   // the output of the mux that becomes the input to ALU module
     
     assign inputs[31:0] = RF_B;  
     assign inputs[63:32] = Immed;  
     
-    
-   
 
+    // Selects the second operant for the ALU between immediate and RF_B
     MUX #(.BUS_WIDTH(32), .SEL(1)) alu_mux (
         .Din(inputs),
         .Sel(ALU_Bin_sel),
         .Dout(mux_to_ALU)
     );
+
 
     ALU alu (
         .A(RF_A),

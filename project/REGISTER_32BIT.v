@@ -1,10 +1,11 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 //
-// Create Date:    21:01:31 12/27/2021 
+// Create Date:    12/27/2021 
 // Design Name: 
 // Module Name:    REGISTER_32BIT 
-// Project Name: 
+// Project Name:   Digital_Hardware_Systems
 //
 // Description: 
 //

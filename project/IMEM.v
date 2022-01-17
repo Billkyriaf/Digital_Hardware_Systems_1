@@ -1,23 +1,20 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    21:45:27 01/08/2022 
+//
+// Create Date:    01/08/2022 
 // Design Name: 
 // Module Name:    IMEM 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   Digital_Hardware_Systems
+// 
 // Description: 
 //
-// Dependencies: 
+//      Instruction memory
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Dependencies:  
 //
 //////////////////////////////////////////////////////////////////////////////////
+
 module IMEM(
     input clk,
     input [9:0] addr,

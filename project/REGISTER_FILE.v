@@ -33,10 +33,10 @@
 //
 // Dependencies: 
 //      
-//      1. src/help_modules/DECODER_5_32.v 
-//      2. src/help_modules/MUX.v 
-//      3. src/REGISTER_FILE/REGISTER_32BIT.v 
-//      4. src/REGISTER_FILE/REGISTER_0_32BIT.v  
+//      1. DECODER_5_32.v 
+//      2. MUX.v 
+//      3. REGISTER_32BIT.v 
+//      4. REGISTER_0_32BIT.v  
 //
 //////////////////////////////////////////////////////////////////////////////////
 

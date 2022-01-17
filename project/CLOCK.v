@@ -7,7 +7,8 @@
 // Module Name:    CLOCK 
 // Project Name:   Digital_Hardware_Systems
 //
-// Description: 
+// Description:
+//
 //      CLOCK module
 //
 // Dependencies: 

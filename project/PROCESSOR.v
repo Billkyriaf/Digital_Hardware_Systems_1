@@ -26,22 +26,23 @@
 `endif
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
 // 
-// Create Date:    13:37:36 01/12/2022 
+// Create Date:    01/12/2022 
 // Design Name: 
 // Module Name:    PROCESSOR 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   Digital_Hardware_Systems
+//
 // Description: 
+//
+//      Connects all the modules together.
 //
 // Dependencies: 
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+//      1. IFSTAGE.v
+//      2. DECSTAGE.v
+//      3. ALUSTAGE.v
+//      4. MEMSTAGE.v
+//      5. CONTROL.v
 //
 //////////////////////////////////////////////////////////////////////////////////
 

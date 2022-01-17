@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
+//
 // Create Date:    12/30/2021 
 // Design Name: 
 // Module Name:    REGISTER_0_32BIT 
@@ -13,6 +14,7 @@
 // Dependencies: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
 module REGISTER_0_32BIT(
     input Clk,              // CLOCK
     output reg [31:0] Dout  // Output bus

@@ -1,22 +1,18 @@
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    12:57:12 01/12/2022 
+//
+// Create Date:    01/12/2022 
 // Design Name: 
 // Module Name:    CONTROL 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   Digital_Hardware_Systems
+//
 // Description: 
+//
+//      Sets all the control signals for every stage of the execution of every instruction.
 //
 // Dependencies: 
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -69,14 +65,20 @@ module CONTROL(
         end
     end
 
+    // If the adder counter changes this means that the previous stage of the instruction
+    // is complete and we need to set the signals for the next one
     always @(adder) begin
-
+        // This if else if else case covers all the cases for the opcodes.
         if (Instr[31:0] == 0) begin  // nop instruction
+
+            // For every instruction / instruction group there is a case statement the switches for every value of the adder counter 
             case (adder)
+                // For the 4rth stage ...
                 3'b100: begin
-                    PC_LdEn = 1;
+                    PC_LdEn = 1;  // ... only the PC_LdEn needs to be set
                 end
 
+                // For every case that is not specified above all the signals need to be 0
                 default: begin
                     PC_Sel = 0;
                     PC_LdEn = 0;
@@ -90,6 +92,7 @@ module CONTROL(
                     Mem_In_Out_Sel = 0;
                 end
             endcase
+
         end else if(Instr[31:26] == 6'b100000) begin  // Arithmetic (ALU) operations
             case (adder)
                 3'b010: begin

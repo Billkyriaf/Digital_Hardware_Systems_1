@@ -11,22 +11,20 @@
 `endif
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
 // 
-// Create Date:    22:18:51 01/11/2022 
+// Create Date:    01/11/2022 
 // Design Name: 
 // Module Name:    MEMSTAGE 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Project Name:   Digital_Hardware_Systems
+//
 // Description: 
+//
+//      Memory read an write logic.
 //
 // Dependencies: 
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+//      1. MEM.v
+//      2. MUX.v
 //
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -39,8 +37,8 @@ module MEMSTAGE(
     output [31:0] MEM_DataOut
     );
 
-    wire [32 * 2 - 1:0] input_mux_data;
-    wire [31:0] input_mux_to_mem;
+    wire [32 * 2 - 1:0] input_mux_data;  // MEM_DataIn and (MEM_DataIn & 255) connect to this bus
+    wire [31:0] input_mux_to_mem;  // Output of the input mux connection to the memory
 
     assign input_mux_data[31:0] = MEM_DataIn;
     assign input_mux_data[63:32] = MEM_DataIn & 32'b00000000_00000000_00000000_11111111;
@@ -53,8 +51,8 @@ module MEMSTAGE(
         .Dout(input_mux_to_mem)
     );
 
-    wire [32 * 2 - 1:0] output_mux_data;
-    wire [31:0] mem_to_output_mux;
+    wire [32 * 2 - 1:0] output_mux_data;  // mem_to_output_mux and (mem_to_output_mux & 255) connect to this bus
+    wire [31:0] mem_to_output_mux;  // Connects the output of the memory to the input of the mux that selects if to read 32bit word or a byte
 
     assign output_mux_data[31:0] = mem_to_output_mux;
     assign output_mux_data[63:32] = mem_to_output_mux & 32'b00000000_00000000_00000000_11111111;

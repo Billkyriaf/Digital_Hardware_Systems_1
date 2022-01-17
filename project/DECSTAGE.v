@@ -12,15 +12,19 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 // 
-// Create Date:    21:34:40 01/03/2022 
+// Create Date:    01/03/2022 
 // Design Name: 
 // Module Name:    DECSTAGE 
 // Project Name:   Digital_Hardware_Systems
 //
-// Description: 
+// Description:
+//
+//      Decodes the instructions and feeds the register file with addresser for read ans write 
 //
 // Dependencies: 
 //
+//      1. MUX.v
+//      2. REGISTER_FILE.v
 //
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -60,6 +64,7 @@ module DECSTAGE(
         .Dout(write_data)
     );
 
+    // Selects which part of the instruction will be passed as the read address 
     MUX #(.BUS_WIDTH(5), .SEL(1)) read_addr_select (
         .Din(read_addr_select_bus),
         .Sel(RF_Bsel),
@@ -86,18 +91,7 @@ module DECSTAGE(
             6'b001111,      // lw
             6'b011111,      // sw
             6'b110000,      // addi
-            6'b111000:      // li
-            begin
-                // This case is for all the opcodes that need a sigh extend on immediate vALUe
-
-                Immed[15:0] = Instr[15:0];  // the first 16 bits of the immediate vALUe is passed to the output
-                
-                // The bits 16 to 31 are filled with the most significant byte of the immediate vALUe
-                for (i = 16; i < 32; i = i + 1) begin
-                    Immed[i] = Instr[15];               
-                end
-            end
-
+            6'b111000,      // li
             6'b000011,      // lb
             6'b000111:      // sb
             begin
