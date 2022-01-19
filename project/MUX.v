@@ -23,15 +23,12 @@ module MUX
   input [SEL-1:0] Sel,                   // Select signal
   output reg [BUS_WIDTH-1:0] Dout        // Dout signal
 );
-    reg [BUS_WIDTH - 1:0] inputs [2 ** SEL - 1:0];
-
     integer i;
     
     always @ ( * ) begin
         for (i = 0; i < 2 ** SEL; i = i + 1) begin
-            inputs[i] = Din[i * BUS_WIDTH +: BUS_WIDTH];
             if (i == Sel) begin
-                Dout = inputs[i];
+                Dout = Din[i * BUS_WIDTH +: BUS_WIDTH];
             end
         end
     end
